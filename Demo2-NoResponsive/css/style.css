@@ -1,0 +1,310 @@
+@font-face {
+	font-display: swap;
+  font-family:  'MelodySouthern';
+  src: url('../fonts/MelodySouthern.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+  	font-family:  'OpenSans-Light';
+  	src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+  	font-family:  'OpenSans-Semibold';
+  	src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+  	font-family:  'Avenir-Regular';
+  	src: url('../fonts/Avenir-Book.ttf') format('truetype');
+}
+
+:root {
+	--primaryfont: 'MelodySouthern', serif;
+	--secondaryfont: 'OpenSans-Light', serif;
+	--opensans_semibold_font: 'OpenSans-Semibold', serif;
+	--avenirfont: 'Avenir-Regular', serif;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	font-family: var(--secondaryfont);
+	color: #010103;
+	font-size: 24px;
+	line-height: 32px;
+}
+h1 {
+	color: #08686c;
+  font-family: var(--primaryfont);
+  font-size: 52px;
+  line-height: 62px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+h3 {
+	color: #08686c;
+  font-size: 36px;
+  line-height: 46px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 44px;
+}
+h5 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.top_bottom_space { padding: 160px 0px; }
+.power_banner { margin-top: 80px; }
+
+/*header*/
+.border_frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo_wrapper {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.logo_wrapper .logo img {
+  filter: grayscale(1) brightness(0) invert(1);
+}
+.video_caption {
+	position: absolute;
+	left: 20%;
+	top: 23%;
+	transform: translate(-20%, -23%);
+}
+
+/*Rare Location - zoom image effect*/
+#sec_zoom{
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+.title_caption_wrapper_abs {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -8%);
+  text-align: center;
+  z-index: 9;
+}
+
+/*building*/
+.building_wrapper {
+  background: url('../images/building_background.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+.building_wrapper div:first-child { flex-basis: 50%; }
+.building_wrapper div:last-child { flex-basis: 40%; }
+.building_move_lr { transform: translateX(-100%); }
+
+/*Art Deco*/
+.art_deco_content_wrapper {
+  background: #006962;
+  position: relative;
+}
+.art_deco_content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.art_deco_content h1, .art_deco_content p {
+  color: #fff;
+  text-align: center;
+}
+.art_deco_content p {
+  width: 85%;
+  margin: auto;
+}
+
+.art_deco_wrapper {
+  background: #006962;
+  padding: 30px;
+}
+.art_deco_slider_wrapper {
+  background: linear-gradient(to right, #c38934, #e5bd7d);
+  padding: 3px;
+}
+.art-deco-slick-slider {
+  padding: 60px;
+  background: #fff;
+}
+.art-deco-slick-slider .slick-prev {
+  left: 32px;
+}
+.art-deco-slick-slider .slick-next {
+  right: 32px;
+}
+.art-deco-slick-slider .slick-prev {
+  background: url(../images/prev-icon-dark-big.png) no-repeat transparent !important;
+}
+.art-deco-slick-slider .slick-next {
+  background: url(../images/next-icon-dark-big.png) no-repeat transparent !important;
+}
+.art-deco-slick-slider .slick-prev, .art-deco-slick-slider .slick-next {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+
+/*A Towring Vision*/
+#sec_move_el { position: relative; overflow: hidden; }
+#sec_move_el img { width: 100%; }
+#sec_move_el .pos_abs {
+	position: absolute;
+	top: 4%;
+  right: 20%;
+}
+#sec_move_el .fade-in {
+	color: #fff;
+  margin-bottom: 230px;
+  border-bottom: 1px solid #fff;
+  padding-left: 280px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(50%);
+}
+#sec_move_el .fade-in h5 {
+  color: #000;
+  font-family: var(--opensans_semibold_font);
+  letter-spacing: 2px;
+}
+#sec_move_el .fade-in:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+.font_sm {
+	font-size:  14px;
+  line-height: 20px;
+	margin-bottom: 5px;
+}
+
+/*club palacio - swimming sequence*/
+canvas#swimming_sequence {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+#swimming_wrapper { position: relative; }
+.swimming_desc_abs {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+}
+.swimming_desc_abs h1, .swimming_desc_abs p { color: #fff; }
+
+
+/*slick slider*/
+.slick-prev {
+  background: url(../images/prev-icon-dark.png) no-repeat transparent !important;
+}
+.slick-next {
+  background: url(../images/next-icon-dark.png) no-repeat transparent !important;
+}
+.slick-prev::before {
+  content: "" !important;
+}
+.slick-next::before {
+  content: "" !important;
+}
+.slick-prev:before, .slick-next:before {
+	color: #000;
+	opacity: 1 !important;
+}
+.slick-prev, .slick-next {
+	width: 40px !important;
+  height: 40px !important;
+  border-radius: 0% !important;
+  z-index: 9;
+}
+/*Indoor and Outdoor*/
+.common_slider .slick-prev { left: -18px; }
+.common_slider .slick-next { right: -18px; }
+.common_slider .slick-dots { display: none !important; }
+.indoor_bullet_controller div, .outdoor_bullet_controller div {
+  color: #08686c;
+  cursor: pointer;
+  font-size: 22px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.indoor_bullet_controller div:hover, .indoor_bullet_controller div.active,
+.outdoor_bullet_controller div:hover, .outdoor_bullet_controller div.active {
+  font-family: var(--opensans_semibold_font);
+}
+.indoor_bullet_controller div:before, .outdoor_bullet_controller div:before {
+  content: "";
+  background: url('../images/arrow-left.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -12%;
+  top: 50%;
+  transform: translate(12%, -50%);
+  width: 14px;
+  height: 26px;
+  opacity: 0;
+  transition: all ease .4s;
+}
+.indoor_bullet_controller div:hover:before, .indoor_bullet_controller div.active:before,
+.outdoor_bullet_controller div:hover:before, .outdoor_bullet_controller div.active:before {
+  content: "";
+  background: url('../images/arrow-left.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -6%;
+  top: 50%;
+  transform: translate(6%, -50%);
+  width: 14px;
+  height: 26px;
+  opacity: 1;
+}
+.indoor_wrapper {
+  padding: 180px 100px;
+  position: relative;
+}
+.outdoor_wrapper {
+  padding: 0px 100px 180px 100px;
+  position: relative;
+}
+.indoor_pattern, .outdoor_pattern {
+  position: absolute;
+  left: -1px;
+}
+.indoor_pattern img, .outdoor_pattern img {
+  width: auto;
+  height: 360px;
+}
+.indoor_wrapper h3, .outdoor_wrapper h3 { font-family: var(--opensans_semibold_font); }
+
+
+/*media query*/
+@media (max-width: 1399.98px) {
+  body {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
